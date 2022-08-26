@@ -1,11 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <a href="{% url 'snack_create' %}">+ New Snack</a>
-  <ul>
+  <h1 class="bg-amber-900 text-center text-4xl p-5">Snack List</h1>
+ 
+    <a class="bg-blue-500 text-blue-300 hover:text-white border-blue-600 border-b p-2 m-2 rounded w-20"href="{% url 'snack_create' %}">New Snack</a>
+  
+  <ul class="text-center">
     {% for snack in object_list %}
     <li>
-      <a href="{% url 'snack_detail' snack.pk %}">{{ snack.title }}</a>
+      <div>
+        <a href="{% url 'snack_detail' snack.pk %}">{{ snack.title }}
+      </div>
+      </a>
     </li>
     {% endfor %}
   </ul>
