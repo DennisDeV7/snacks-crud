@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>Update Page<h1>
-  <form action="" method="post">
+  <h1 class="bg-amber-900 text-center text-4xl p-5">Update Page<h1>
+  <form class="text-center border-green-600"action="" method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" value="SAVE">
+    <input class="bg-green-400 text-gray-500 hover:text-white border-blue-600 border-b p-2 m-2 rounded w-20" type="submit" value="SAVE">
   </form>
 
 {% endblock content %}
